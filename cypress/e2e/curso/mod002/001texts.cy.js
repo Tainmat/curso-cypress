@@ -11,9 +11,11 @@ class FormValues {
 const form = new FormValues()
 
 describe('Work with basic elements', () => {
-  it('Text', () => {
+  before(() => {
     cy.visit('https://www.wcaquino.me/cypress/componentes.html')
+  })
 
+  it('Text', () => {
     form.elements.body().should('contain', 'Cuidado')
 
     form.elements.span().should('contain', 'Cuidado')

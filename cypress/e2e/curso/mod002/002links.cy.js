@@ -1,9 +1,12 @@
 /// <reference types="cypress" />
 
-describe('Work with link', () => {
-  it('Links', () => {
-    cy.visit('https://www.wcaquino.me/cypress/componentes.html')
 
+describe('Work with link', () => {
+  beforeEach(() => {
+    cy.visit('https://www.wcaquino.me/cypress/componentes.html')
+  })
+
+  it('Links', () => {
     cy.get('[href="#"]').click()
     cy.get('#resultado').should('have.text', 'Voltou!')
 

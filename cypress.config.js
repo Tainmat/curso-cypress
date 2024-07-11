@@ -5,5 +5,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    testIsolation: false, // não vai limpar o estado da tela após cada it
   },
 });
